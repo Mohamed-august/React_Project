@@ -91,7 +91,7 @@ const App = () => {
     return updated;
   });
 
-  // ✅ show success notification only once
+ 
   toast.success("🗑️ Job deleted successfully!");
 };
 

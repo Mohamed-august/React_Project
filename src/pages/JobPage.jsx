@@ -16,8 +16,8 @@
     const handleDelete = async () => {
         if (window.confirm("Are you sure you want to delete this job?")) {
         try {
-            await deleteJob(job.id); // ✅ handled in App.jsx (toast + state update)
-            navigate("/jobs", { replace: true }); // ✅ go back to jobs list
+            await deleteJob(job.id); 
+            navigate("/jobs", { replace: true }); 
         } catch (error) {
             console.error("Error deleting job:", error);
             toast.error("❌ Failed to delete job. Please try again.");

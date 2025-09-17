@@ -6,7 +6,6 @@
     const navigate = useNavigate();
     const job = useLoaderData();
 
-    // Pre-fill form with existing job data
     const [title, setTitle] = useState(job?.title || "");
     const [type, setType] = useState(job?.type || "Full-Time");
     const [location, setLocation] = useState(job?.location || "");
@@ -18,7 +17,6 @@
     const [companyEmail, setCompanyEmail] = useState(job?.company?.contactEmail || "");
     const [companyPhone, setCompanyPhone] = useState(job?.company?.contactPhone || "");
 
-    // Ensure form is updated if job data changes
     useEffect(() => {
         if (job) {
         setTitle(job.title);
@@ -56,8 +54,8 @@
         };
 
         try {
-        await updateJobSubmit(updatedJob); // ✅ handled in App.jsx (toast + state update)
-        navigate("/jobs", { replace: true }); // ✅ redirect back to jobs list
+        await updateJobSubmit(updatedJob); 
+        navigate("/jobs", { replace: true }); 
         } catch (error) {
         console.error("Error updating job:", error);
         toast.error("❌ Failed to update job. Please try again.");

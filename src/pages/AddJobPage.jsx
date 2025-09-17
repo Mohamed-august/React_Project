@@ -52,7 +52,7 @@
         };
 
         try {
-        await addJobSubmit(newJob); // ✅ handled in App.jsx (toast + state update)
+        await addJobSubmit(newJob); 
         resetForm();
 
         // ✅ Navigate back to jobs list

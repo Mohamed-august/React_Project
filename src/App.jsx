@@ -7,14 +7,14 @@ import {
 } from "react-router-dom";
 import { toast } from "react-toastify";
 
-import MainLayout from "./layouts/MainLayout";
-import HomePage from "./pages/HomePage";
-import JobsPage from "./pages/JobsPage";
-import JobPage from "./pages/JobPage";
-import NotFoundPage from "./pages/NotFoundPage";
-import AddJobPage from "./pages/AddJobPage";
-import EditJobPage from "./pages/EditJobPage";
-import { jobLoader } from "./loaders/jobLoader";
+import MainLayout from "../src/layouts/MainLayout";
+import HomePage from "../src/pages/HomePage";
+import JobsPage from "../src/pages/JobsPage";
+import JobPage from "../src/pages/JobPage";
+import NotFoundPage from "../src/pages/NotFoundPage";
+import AddJobPage from "../src/pages/AddJobPage";
+import EditJobPage from "../src/pages/EditJobPage";
+import { jobLoader } from "../src/loaders/jobLoader";
 
 const App = () => {
   const [jobs, setJobs] = useState([]);
@@ -91,7 +91,6 @@ const App = () => {
     return updated;
   });
 
- 
   toast.success("🗑️ Job deleted successfully!");
 };
 

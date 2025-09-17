@@ -1,4 +1,4 @@
-    import JobCard from "./JobListing";
+    import JobCard from "../components/JobListing";
 
     const JobListings = ({ jobs = [], isHome = false }) => {
     if (!jobs || jobs.length === 0) {

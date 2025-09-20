@@ -13,17 +13,17 @@
         );
     }
 
-    const handleDelete = async () => {
+            const handleDelete = async () => {
         if (window.confirm("Are you sure you want to delete this job?")) {
-        try {
-            await deleteJob(job.id); 
-            navigate("/jobs", { replace: true }); 
-        } catch (error) {
+            try {
+            await deleteJob(job.id);
+            navigate("/jobs"); 
+            } catch (error) {
             console.error("Error deleting job:", error);
             toast.error("❌ Failed to delete job. Please try again.");
+            }
         }
-        }
-    };
+        };
 
     return (
         <section className="bg-indigo-50">

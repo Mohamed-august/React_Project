@@ -15,7 +15,6 @@ import NotFoundPage from "../src/pages/NotFoundPage";
 import AddJobPage from "../src/pages/AddJobPage";
 import EditJobPage from "../src/pages/EditJobPage";
 import { jobLoader } from "../src/loaders/jobLoader";
-
 const App = () => {
   const [jobs, setJobs] = useState([]);
   const [nextId, setNextId] = useState(1);
@@ -101,15 +100,17 @@ const App = () => {
         <Route index element={<HomePage jobs={jobs} />} />
         <Route path="jobs" element={<JobsPage jobs={jobs} />} />
         <Route
-          path="jobs/:id"
-          element={<JobPage deleteJob={deleteJob} />}
-          loader={jobLoader}
-        />
+        path="jobs/:id"
+        element={<JobPage deleteJob={deleteJob} />}
+        loader={jobLoader}
+      />
+
         <Route
-          path="edit-job/:id"
-          element={<EditJobPage updateJobSubmit={updateJob} />}
-          loader={jobLoader}
+        path="edit-job/:id"
+        element={<EditJobPage updateJobSubmit={updateJob} />}
+        loader={jobLoader}
         />
+
         <Route
           path="add-job"
           element={<AddJobPage addJobSubmit={addJob} />}
